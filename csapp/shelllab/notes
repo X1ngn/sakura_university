@@ -1,0 +1,373 @@
+## shelllab
+
+
+
+### 异常控制流
+
+由于某些特殊情况引起用户程序的正常执行被打断所形成的意外控制流称为异常控制流
+
+- 内部异常（缺页、越权、越级、整除0、溢出等）
+- 外部异常（ctrl+c、打印缺纸、DMA结束等）
+- 进程上下文切换
+- 一个进程直接发信号给另一个进程
+
+按处理方式分为故障，自陷和终止三类
+
+
+
+### 中断/异常相应过程
+
+1. 关中断
+
+2. 保护断点和程序状态
+
+3. 识别中断源
+
+    （1）软件识别
+
+    （2）硬件识别（向量中断）
+
+    256种不同类型的异常和中断，其唯一编号称为中断向量号，有与之对应的**异常处理程序**或**中断服务程序**，它们存放在**中断向量表**（实模式）或**中断描述符表**（保护模式）中，有256个表项，中断向量表每个表项4字节（两个字节为CS，两个字节为IP），中断描述符表每个表项8字节（如下图），前32个类型保留给cpu使用，剩余由操作系统自行定义，通过执行`int N`使cpu跳转到操作系统给出的编号为N的中断服务程序
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghccmh02hnj30e60cwwei.jpg)
+
+- P:linux总把p设置为1
+
+- DPL:访问本段要求的最低特权级（linux除3、4、5、128号中断外绝大多数都为0）
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1ghcdfx7bbdj31ds0n01kx.jpg)
+
+4. 返回
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghcdgiiag6j31ds0n0493.jpg)
+
+
+
+
+
+### mmap函数实现进程的存储器映射
+
+`void *mmap( void *start, size_t length, int port, int flags, int fd, off_t offset);`
+
+将指定文件fd中偏移量offset开始的长度为length个字节的一块信息映射到虚拟空间中起始地址为start、长度为length个字节的一块信息映射到虚拟空间中起始位置为start，长度为length个字节的一块区域，得到vm_area_struct结构的信息，并初始化相应的表项，建立文件地址与虚存区域之间的映射关系。进程运行时，第一次访问这些页面时，会发生缺页，由缺页处理程序进行文件读写
+
+prot指定该区域内页面的访问权限位，对应vm_area_struct结构中的vm_prot字段
+
+- PROT_EXE：页面内容由指令组成
+- PROT_READ：区域内页面可读
+- PROT_WRITE：区域内页面可写
+- PROT_NONE：区域内页面不可访问
+
+flags指定所映射的对象的类型，对应vm_area_struct结构中的vm_flags字段
+
+- MAP_PRIVATE：私有对象，采用**写时拷贝技术**，对应可执行文件中只读代码区域和已初始化数据区域
+- MAP_SHARED：共享对象，对应共享库文件中的信息
+- MAP_ANON：请求0的页，对应内核创建的匿名文件，对应页框用0初始化并驻留内存
+- MAP_PRIVATE | MAP_ANON：未初始化数据、堆和用户栈等对应区域
+
+
+
+### 访问共享库文件中的共享对象
+
+进程1运行时，内核为共享对象分配若干页框，进程2运行时，内核只要将进程2对应区域内页表项中的页框号直接填上即可，任何进程写操作的结果对其他进程都是有效的
+
+访问私有对象——写时拷贝技术
+
+同一个可执行文件对应不同进程，进程1运行时，内核为进程1分配若干页框，并标记为只读，进程2运行时，内核只要将进程2对应区域内页表项中的页框号直接填上即可
+
+若两个进程都是读或执行，则在主存中都只有一个副本，节省主存；若一个进程进行写操作，则发生访问违例，此时，内核判断异常原因是试图写私有的写时拷贝页，就会分配一个新的页框，把内容拷贝到新页框，并修改 进行写操作的进程 的对应页框
+
+
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghc7gi10uvj30ww0suq5y.jpg)
+
+
+
+程序加载运行
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghc93jcxrej31dg0t41kx.jpg)
+
+通过execve()函数启动加载器，其功能是在当前进程上下文中加载并运行一个新程序
+
+`int execve(char *filename, char *argv[], *envp[]);`
+
+可带参数列表argv和环境变量envp（形如"name=value"的名字-值对）
+
+执行成功则将控制权传递到可执行目标中的main()函数
+
+`int main(int argc, char *argv[], *envp[]);`
+
+执行失败则返回-1，并将控制权交给调用程序
+
+main()函数开始执行时，用户栈从高地址到低地址，首先是环境变量字符串和命令行参数字符串，然后是以null结尾的指针数组，每个指针都指向栈中的一个环境变量字符串。全局变量environ指向这些指针中的第一个——envp[0]。往后是以null结尾的argv[]数组，每个指针都指向栈中的一个命令行参数字符串。栈顶是系统启动函数libc_start_main()的栈帧
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghci2fd1atj316k0u07wi.jpg)
+
+
+
+### shell
+
+一个简单的shell例程
+
+```c
+void eval(char *cmdline);
+int parseline(char *buf, char **argv);
+int builtin_command(char **argv);
+
+int main()
+{
+	char cmdline[MAXLINE];
+	
+	while(1){
+    printf(">");
+    Fgets(cmdline, MAXLINE, stdin);
+    if(feof(stdin))
+      exit(0);
+    
+    eval(cmdline);
+  }
+}
+```
+
+eval函数首要任务是调用parseline函数解析以空格分隔的命令行参数，并构造最终会传递给execve的argv向量
+
+如果最后一个参数是'&'字符，那么parseline返回1，表示应该在后台执行该程序（shell不会等待他完成）；否则返回0，表示应该在前台执行该程序（shell会等待他完成）
+
+解析命令后eval函数调用builtin_command，检查第一个参数是不是一个内置的shell命令，如果是，shell会马上解释这个命令，并返回1；否则返回0，shell会认为这是一个可执行目标文件，从而创建一个新的子进程，并在子进程中执行所请求的程序（如果后台执行，那么shell返回循环顶部，等待下一个命令行；否则shell使用waitpid()函数等待作业终止，终止后开始下一轮迭代）
+
+
+
+### 回收子进程
+
+init进程的PID为1，是在系统启动时由内核创建的，它不会终止，是所有进程的祖先。如果一个父进程没有回收它的僵死子进程就终止了，内核会安排init进程回收它们。僵死子进程没有运行，但仍然消耗系统的内存资源
+
+一个进程可以通过调用waitpid函数来等待它的子进程终止或停止
+
+```c
+#include<sys/types.h>
+#include<sys/wait.h>
+
+pid_t waitpid(pid_t pid, int *statusp, int option);
+```
+
+默认情况下，即option=0时，waitpid挂起调用进程的执行，直到它的等待集合（wait set）中的一个子进程终止，函数才返回；如果在调用的时候，等待集合中的一个进程已经终止了，那么waitpid就立即返回
+
+这两种情况waitpid都会返回导致waitpid返回的已终止子进程的PID，此时，已终止的子进程已经被回收，内核会从系统中删除掉它的所有痕迹（如果调用进程没有子进程，waitpid函数返回-1）
+
+>等待集合由pid参数确定：
+>
+>pid>0，等待集合就是进程ID等于pid的一个单独的子进程
+>
+>pid=-1，等待集合就是由父进程所有的子进程组成的
+>
+>……
+
+wait函数是waitpid函数的简单版本
+
+```
+#include<sys/types.h>
+#include<sys/wait.h>
+
+pid_t wait(int *statusp);
+//调用wait(&status)相当于调用waitpid(-1,&status,0)
+```
+
+
+
+解析shell的一个输入行，这里要用waitpid函数回收子进程
+
+```c
+int parseline(char *buf, char **argv)
+{
+    char *delim;                          //指向命令后面分隔符，需要将其改为'\0', 以此分隔命令行参数
+    int argc;
+    int bg;
+
+    bug[strlen(buf)-1] = ' ';             //用空格覆盖'\n' 
+    while(*buf && *buf = ' ')             //跳过命令前面的空格
+        buf++;
+
+    argc = 0;
+    while ((delim = strchr(buf, ' '))) {  //strchr函数功能为在一个串中查找给定字符的第一个匹配之处
+        argv[argc++] = buf;               //将分隔好的命令行参数地址存入argv[]数组中
+        *delim = '\0';
+        buf = delin + 1;                  //从'\0'下一位开始
+        while(*buf && (*buf == ' '))      //跳过命令行参数之间的空格，指向下一个参数
+            buf++;
+    }
+    argv[atgc] = NULL;                    //指针数组以NULL结尾
+
+    if(argc == 0)                         //跳过空行
+        return 1;
+
+    if((bg = (*argv[atgc-1] == '&')) != 0)//判断最后一位是不是'&'————判断前台执行还是后台执行
+        argv[--argc] = NULL;
+
+    return bg;
+}
+
+int builtin_command(char **argv)
+{
+    if(!strcmp(argv[0], "quit"))          //只有一个quit命令作为例子
+        exit(O);
+    if(!strcmp(atgv[0], "&"))             //忽略'&'符号
+        return 1;
+    return 0;                             //不是命令
+}
+
+void eval(char *cmdline)
+{
+	char *argv[MAXLINE];                  //存放分隔后的命令行参数
+	char buf[MAXLINE];
+	int bg;
+	pid_t pid;
+	
+	strcpy(buf,cmdline);
+	bg = parseline(buf, argv);            //是否在后台执行该程序
+	if(argv[0] == NULL)
+		return;                           //忽略空行
+		if(!builtin_command(argv)){
+            if((pid = Fork()) == 0){      //子进程执行execve函数
+                if(execve(argv[0], argv, environ) < 0){
+                    printf("%s: Command not found.\n", argv[0]);
+                    exit(0);
+                }
+            }
+
+            if(!bg){                      //在前台执行程序
+                int status;
+                if(waitpid(pid, &status, 0) < 0)
+                    unix_error("waitfg: waitpid error");
+            }
+            else
+                printf("%d %s", pid, cmdline);
+        }
+        return;
+}
+```
+
+但是这个简单的shell并不回收它的后台子进程，若要实现回收后台子进程，需要用到信号
+
+
+
+### 信号
+
+信号是更高层的软件形式的异常，用于通知进程系统中发生了某种系统事件
+
+比如如果进程进行非法内存引用，内核就发送给它一个SIGSEGV信号（号码11）
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghdqkyeh0nj30u00wq4qq.jpg)
+
+1. 发送信号：内核通过更新目的进程上下文中的某个状态，发送一个信号给目的进程
+
+    发送信号可以有两种原因
+
+    - 内核检测到一个系统事件，比如除零错误或者子进程终止
+
+    - 一个进程调用了kill函数，显式地要求内核发送一个信号给目的进程。一个进程可以发送信号给自己
+
+    (1)用 /bin/kill 程序发送信号
+
+    如命令`/bin/kill -9 15213`表示发送信号9(SIGKILL)给进程15213
+
+    如命令`/bin/kill -9 915213`表示发送信号9(SIGKILL)给进程组15213中的每个进程（负的PID导致信号被发送进程组PID中的每个进程）
+
+    (2)从键盘发送
+
+    如在键盘上输入Ctrl+C会导致内核发送一个SIGINT信号到前台进程组中的每个进程，默认情况下其结果是终止进程
+
+    (3)kill函数发送信号
+
+    ```
+    #include <sys/types.h>
+    #include <signal.h>
+    
+    int kill(pid_t pid, int sig);
+    //成功则返回0，错误则返回-1
+    ```
+
+    pid>0，发送信号号码sig给进程pid
+
+    pid=0，发送信号号码sig给调用进程所在进程组中的每个进程，包括自己
+
+    pid<0，发送信号号码sig给进程组 |pid|（pid的绝对值）中的每个进程
+
+    (4)alarm函数发送信号
+
+    ```
+    #include <unistd.h>
+    unsigned int alarm(unsigned int secs);
+    ```
+
+    alarm函数安排内核在secs秒后发送一个SIGALRM信号给调用进程
+
+    如果secs为0，则不会调度安排新的闹钟
+
+    调用alarm函数将取消待处理的闹钟，并且返回 如果没有取消闹钟的话 闹钟在被发送前还剩下的秒数
+
+    如果没有待处理的闹钟，返回0
+
+2. 接收信号：当目的进程被内核强迫以某种方式对信号的发送作出反应时，它就接收了信号
+
+    收到信号后会出发进程采取某种行为，完成这个行为后返回到下一条指令，每个信号类型都有一个预定义的默认行为
+
+    行为：
+
+    - 忽略这个信号
+    - 终止
+    - 执行一个称为信号处理程序的用户层函数（下文中的handler函数）捕获这个信号
+
+    进程可以通过使用signal函数修改和信号相关的默认行为（SIGSTOP和SIGKILL的默认行为是不能修改的）
+
+    ```
+    #include <signal.h>
+    typedef void (*sighandler_t)(int);											
+    sighandler_t signal(int signum, sighandler_t handler);	//接收到信号signum，则执行handler函数
+    ```
+
+3. 信号阻塞
+
+    一个进程可以阻塞接收某种信号，一种信号被阻塞时，信号仍可以被发送，但产生的待处理信号不会被接收，直到进程取消对这种信号的阻塞
+
+    待处理信号是指一个发出而没有被接收的信号，一种类型至多只会有一个待处理信号，其他发送到这个进程的这个类型的信号都会被丢弃。一个待处理信号最多只能被接收一次
+
+    - 隐式阻塞：内核默认阻塞任何当前处理程序正在处理信号类型的待处理的信号
+
+    - 显式阻塞：使用sigpromask函数改变当前阻塞的信号集合（blocked位向量）
+
+        `int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);`
+
+        how:
+
+        SIG_BLOCK:把set中的信号添加到阻塞信号集合中
+
+        SIG_UNBLOCK:把set中的信号从阻塞信号集合中删除
+
+        SIG_SETMASK:让阻塞信号集合中只有set中的信号
+
+        如果oldset非空，那么阻塞信号集合修改之前的值保存在oldset中
+
+
+
+实现父进程回收后台子进程
+
+修改SIGCHLD信号的默认行为：将wait函数返回值赋给pid
+
+父进程在创建子进程之后，把pid重置为0，取消阻塞SIGCHLD，然后以循环方式等待pid变为非0
+
+而函数循环十分浪费处理器资源，可以用pause函数（pause函数让程序暂停，等待信号）
+
+用sigsuspend函数消除父进程和子进程的竞争，
+
+运行sigsuspend函数相当于原子地（不可中断的）运行：
+
+```
+sigprocmask(SIG_SETMASK, &mask, &prev);
+pause()
+sigprocmask(SIG_SETMASK, &prev, NULL);
+```
+
+每次调用sigsuspend函数之前，都要阻塞SIGCHLD，sigsuspend会暂时取消阻塞SIGCHLD，然后休眠，直到父进程捕获信号。
+
+如果父进程捕获一个SIGINT，那么循环成功，返回前会恢复原始的阻塞集合，即再次阻塞SIGCHLD，下一次迭代又再次调用sigsuspend；如果父进程捕获一个SIGCHLD，那么循环失败，会退出循环，返回前会恢复原始的阻塞集合，即再次阻塞SIGCHLD，我们可以有选择地取消阻塞SIGCHLD
+
