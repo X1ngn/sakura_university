@@ -1,7 +1,9 @@
 # sakura_university
 
 这是在sakura大学的摸爬滚打记录
+
 前两个月
+
 - csapplab
 - ucore实验
 
@@ -27,14 +29,21 @@
   > 
   > -gdb tcp::1234 设置gdb的调试端口为1234
   
+  
   内核中命令
+  
   lsmod
+  
   insmod xx.ko
+  
   rmmod xx.ko
   
   gdb命令
+  
   gdb vmlinux
+  
   add-symbol-file ./xx.ko 0x(模块基地址) //加载驱动的符号文件
+  
   target remote :1234
 
 
