@@ -4,7 +4,7 @@
 前两个月
 - csapplab
 - ucore实验
-`aaa`
+
 
 <details>
   <summary>2020.10.20:搭建内核pwn环境 && 看了一些内核pwn的博客</summary>
@@ -26,5 +26,17 @@
   > -initrd 设置刚才利用busybox创建的rootfs.img，作为内核启动的文件系统
   > 
   > -gdb tcp::1234 设置gdb的调试端口为1234
+  
+  内核中命令
+  lsmod
+  insmod xx.ko
+  rmmod xx.ko
+  
+  gdb命令
+  gdb vmlinux
+  add-symbol-file ./xx.ko 0x(模块基地址) //加载驱动的符号文件
+  target remote :1234
+
+
 
 </details>
