@@ -9,44 +9,33 @@
 
 
 <details>
-  <summary>2020.10.20:搭建内核pwn环境 && 看了一些内核pwn的博客</summary>
-  
-  > qemu-system-x86_64 -kernel ~/tools/linux-5.2.1/arch/x86_64/boot/bzImage -initrd ~/tools/busybox-1.31.0/rootfs.img 
-  > 
-  > -append "console=ttyS0 root=/dev/ram rdinit=/sbin/init" \
-  > 
-  > -cpu kvm64,+smep,+smap \
-  > 
-  > -nographic \
-  > 
-  > -gdb tcp::1234
-  
-  > -cpu kvm64,+smep,+smap 设置CPU的安全选项，这里开启了smap和smep
-  > 
-  > -kernel 设置内核bzImage文件的路径
-  > 
-  > -initrd 设置刚才利用busybox创建的rootfs.img，作为内核启动的文件系统
-  > 
-  > -gdb tcp::1234 设置gdb的调试端口为1234
+  <summary>2020.10.20:搭建内核pwn环境</summary>
+    > -cpu kvm64,+smep,+smap 设置CPU的安全选项，这里开启了smap和smep
+    > 
+    > -kernel 设置内核bzImage文件的路径
+    > 
+    > -initrd 设置刚才利用busybox创建的rootfs.img，作为内核启动的文件系统
+    > 
+    > -gdb tcp::1234 设置gdb的调试端口为1234
   
   
-  内核中命令
+    内核中命令
+    ```
+    lsmod
   
-  lsmod
+    insmod xx.ko
   
-  insmod xx.ko
+    rmmod xx.ko
+    ```
   
-  rmmod xx.ko
+    gdb命令
+    ```
+    gdb vmlinux
   
+    add-symbol-file ./xx.ko 0x(模块基地址) //加载驱动的符号文件
   
-  gdb命令
-  
-  gdb vmlinux
-  
-  add-symbol-file ./xx.ko 0x(模块基地址) //加载驱动的符号文件
-  
-  target remote :1234
-
+    target remote :1234
+    ```
 </details>
 
 <details>
