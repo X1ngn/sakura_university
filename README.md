@@ -11,6 +11,8 @@
 <details>
   <summary>2020.10.20:搭建内核pwn环境</summary>
   
+  qemu参数：
+  
    -cpu kvm64,+smep,+smap 设置CPU的安全选项，这里开启了smap和smep
    
    -kernel 设置内核bzImage文件的路径 
@@ -20,7 +22,7 @@
    -gdb tcp::1234 设置gdb的调试端口为1234
   
   
-   内核中命令
+   内核中命令：
    
    lsmod
    
@@ -30,7 +32,7 @@
   
   
   
-   gdb命令
+   gdb命令：
    
    gdb vmlinux
    
@@ -43,3 +45,14 @@
 <details>
   <summary>2020.10.21:学习Double Fetch漏洞原理 && 复现2018 0CTF Finals Baby Kernel</summary>
 </details>
+
+<details>
+  <summary>2020.10.22:复现2018 0CTF Finals Baby Kernel && 学习MIPS架构汇编语言</summary>
+  wp：
+  
+  学习笔记：
+  
+</details>
+
+
+
