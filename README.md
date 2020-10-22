@@ -10,6 +10,7 @@
 
 <details>
   <summary>2020.10.20:搭建内核pwn环境</summary>
+    >
     > -cpu kvm64,+smep,+smap 设置CPU的安全选项，这里开启了smap和smep
     > 
     > -kernel 设置内核bzImage文件的路径
@@ -19,16 +20,16 @@
     > -gdb tcp::1234 设置gdb的调试端口为1234
   
   
-    内核中命令
-    ```
-    lsmod
+   内核中命令
+   ```
+   lsmod
   
-    insmod xx.ko
+   insmod xx.ko
   
-    rmmod xx.ko
-    ```
+   rmmod xx.ko
+   ```
   
-    gdb命令
+   gdb命令
     ```
     gdb vmlinux
   
