@@ -48,9 +48,9 @@
 
 <details>
   <summary>2020.10.22:复现2018 0CTF Finals Baby Kernel && 学习MIPS架构汇编语言</summary>
-  wp：
+  wp：https://x1ng.top/2020/10/22/kernel-pwn%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF-%E6%9B%B4%E6%96%B0%E4%B8%AD/
   
-  学习笔记：
+  学习笔记：https://x1ng.top/2020/10/22/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9B%B4%E6%96%B0%E4%B8%AD/
   
 </details>
 
