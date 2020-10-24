@@ -54,5 +54,13 @@
   
 </details>
 
+<details>
+  <summary>补作业</summary>
+</details>
 
+<details>
+  <summary>看bytectf题&&看工控ctf题</summary>
+  学了一下golang语言的竞争漏洞
+  又是零解的一天呜呜呜
+</details>
 
