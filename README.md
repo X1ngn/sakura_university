@@ -65,6 +65,6 @@
 </details>
 
 <details>
-  <summary>2020.10.25:[s]继续看题[/s]做不出题&&ARM架构汇编</summary>
+  <summary>2020.10.25:<s>继续看题</s>做不出题&&ARM架构汇编</summary>
 </details>
 
