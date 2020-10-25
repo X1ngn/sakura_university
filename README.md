@@ -59,12 +59,12 @@
 </details>
 
 <details>
-  <summary>2020.10.24:看bytectf题&&看工控ctf题</summary>
+  <summary>2020.10.24:看bytectf题 && 看工控ctf题</summary>
   学了一下golang语言的竞争漏洞
   又是零解的一天呜呜呜
 </details>
 
 <details>
-  <summary>2020.10.25:<s>继续看题</s>做不出题&&ARM架构汇编</summary>
+  <summary>2020.10.25:<s>继续看题</s> 做不出题 && ARM架构汇编</summary>
 </details>
 
