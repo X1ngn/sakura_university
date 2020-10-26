@@ -69,7 +69,7 @@
 </details>
 
 <details>
-  <summary>2020.10.25:重新装了梯子 && 看了下pwnable.tw的CVE-2018-1160</summary>
+  <summary>2020.10.26:重新装了梯子 && 看了下pwnable.tw的CVE-2018-1160</summary>
   看着ida的反汇编有点迷，准备先复现一遍，，环境又搭不好
 </details>
 
