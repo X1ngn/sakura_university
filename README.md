@@ -65,6 +65,11 @@
 </details>
 
 <details>
-  <summary>2020.10.25:<s>继续看题</s> 做不出题 && ARM架构汇编</summary>
+  <summary>2020.10.25:<s>继续看题</s> 做不出题 && 看了一些ARM架构汇编</summary>
+</details>
+
+<details>
+  <summary>2020.10.25:重新装了梯子 && 看了下pwnable.tw的CVE-2018-1160</summary>
+  看着ida的反汇编有点迷，准备先复现一遍，，环境又搭不好
 </details>
 
