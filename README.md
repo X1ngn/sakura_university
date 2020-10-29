@@ -76,3 +76,11 @@
 <details>
   <summary>2020.10.27:补作业 && 研究byte的wp</summary>
 </details>
+
+<details>
+  <summary>2020.10.28:补作业</summary>
+</details>
+
+<details>
+  <summary>2020.10.29:装mips pwn环境</summary>
+</details>
