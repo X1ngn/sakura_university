@@ -93,5 +93,6 @@
 <details>
   <summary>2020.10.30:<s>继续学RTOS</s> 做不出题 && 看了pwnable.tw上calc的思路 && 参加了一个AWD的训练赛</summary>
   最后rt-thread的题是0解题，希望出wp
+  
   还没打过AWD，然而两个小时没有队做出pwn来，感觉白白浪费了时间看一道堆题
 </details>
