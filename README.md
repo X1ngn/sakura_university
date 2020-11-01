@@ -96,3 +96,7 @@
   
   还没打过AWD，然而两个小时没有队做出pwn来，感觉白白浪费了时间看一道堆题
 </details>
+
+<details>
+  <summary>2020.10.30:新生培训</summary>
+</details>
