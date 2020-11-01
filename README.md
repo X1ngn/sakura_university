@@ -98,5 +98,5 @@
 </details>
 
 <details>
-  <summary>2020.11.1:新生培训</summary>
+  <summary>2020.11.1:培训新生</summary>
 </details>
