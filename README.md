@@ -103,7 +103,7 @@
 
 <details>
   <summary>2020.11.2:学习mips架构下gdb调试</summary>
-  主要跟着[这个师傅的博客]https://ray-cp.github.io/archivers/MIPS_Debug_Environment_and_Stack_Overflow)走
+  主要跟着[这个师傅的博客] (https://ray-cp.github.io/archivers/MIPS_Debug_Environment_and_Stack_Overflow) 走
   
   静态编译  mipsel-linux-gcc -o test test.c -static
   
