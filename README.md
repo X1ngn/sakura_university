@@ -116,4 +116,21 @@
    shell2:gdb-multiarch ./hello
           target remote 127.0.0.1:1234
   
+  与pwntools结合
+  
+  ```
+  from pwn import*
+  import sys
+
+  context.binary = "ma"
+  context.arch='mips'
+  context.log_level = "debug"
+
+  if sys.argv[1] == "r":
+    p = remote("remote_addr", remote_port)
+  elif sys.argv[1] == "l":
+    p = process(["qemu-mipsel-static", "-L", "./", "./ma"])
+  else:
+    p = process(["qemu-mipsel-static", "-g", "1234", "-L", "./", "./ma"])
+  ```
 </details>
