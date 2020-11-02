@@ -133,5 +133,5 @@
   
   另一个shell执行shell2的操作
   
-  wp:
+  复现wp:https://x1ng.top/2020/11/02/mips-pwn%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF/
 </details>
