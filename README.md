@@ -108,6 +108,7 @@
    shell1:`qemu-mipsel -g 1234 -L /Path/buildroot/output/target/ test`
    
    shell2:`gdb-multiarch ./test`
+   
           `target remote 127.0.0.1:1234`
   
   与pwntools结合
