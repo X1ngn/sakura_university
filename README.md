@@ -135,3 +135,8 @@
   
   复现wp:https://x1ng.top/2020/11/02/mips-pwn%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF/
 </details>
+
+<details>
+  <summary>2020.11.3:继续写了之前的调试器 && 学了一些stm32的知识</summary>
+  调试器看了一些原理后还是得跟着网上写，实现了c、b、q、x的功能
+</details>
