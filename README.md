@@ -140,3 +140,10 @@
   <summary>2020.11.3:继续写了之前的调试器 && 学了一些stm32的知识</summary>
   调试器看了一些原理后还是得跟着网上写，实现了c、b、q、x的功能
 </details>
+
+<details>
+  <summary>2020.11.4:补作业 && 看sctf 2020 stm32逆向题</summary>
+  毛概开题报告花了点时间
+  
+  大概看了一下[google到师傅的stm32的wp](https://xuanxuanblingbling.github.io/iot/2020/07/08/stm32/)，但是看得不是很懂
+</details>
