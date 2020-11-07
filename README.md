@@ -156,3 +156,9 @@
   <summary>2020.11.6:补作业 && 学习stm引脚知识</summary>
   结合stm32中文手册看了四节课，才勉强看明白了sctf 2020 Password Lock Plus逆向题wp  or2
 </details>
+
+
+<details>
+  <summary>2020.11.7:参加太湖杯</summary>
+  打了一天还是卑微一解，mips的程序调用返回还是不太明白，，有空再多看几遍
+</details>
