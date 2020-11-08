@@ -162,3 +162,9 @@
   <summary>2020.11.7:参加太湖杯</summary>
   打了一天还是卑微一解，mips的程序调用返回还是不太明白，，有空再多看几遍
 </details>
+
+
+<details>
+  <summary>2020.11.8:学习codeql</summary>
+  搭环境就花了大半天or2，，看itergator那个README看不懂，找了几篇博客从0开始学
+</details>
