@@ -171,5 +171,5 @@
 
 <details>
   <summary>2020.11.9:继续学习codeql && 刷几道leetcode简单题</summary>
-  大概了解了语法，递归谓词还不是很理解，itegator的文档依旧看的不是很懂，看了一篇[用codeql挖洞的文章] (https://cloud.tencent.com/developer/article/1645870)
+  大概了解了语法，递归谓词还不是很理解，itegator的文档依旧看的不是很懂，看了一篇用codeql挖洞的文章
 </details>
