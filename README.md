@@ -161,6 +161,7 @@
 <details>
   <summary>2020.11.7:参加太湖杯</summary>
   打了一天还是卑微一解，mips的程序调用返回还是不太明白，，有空再多看几遍
+  wp:https://x1ng.top/2020/11/08/%E5%A4%AA%E6%B9%96%E6%9D%AF-easyKooc-wp/
 </details>
 
 
@@ -172,4 +173,12 @@
 <details>
   <summary>2020.11.9:继续学习codeql && 刷几道leetcode简单题</summary>
   大概了解了语法，递归谓词还不是很理解，itegator的文档依旧看的不是很懂，看了一篇用codeql挖洞的文章
+</details>
+
+<details>
+  <summary>2020.11.10:复习c++的迭代器 && 继续学习codeql</summary>
+</details>
+
+<details>
+  <summary>2020.11.11:</summary>
 </details>
