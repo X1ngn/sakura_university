@@ -53,7 +53,7 @@
 </details>
 
 <details>
-  <summary>2020.10.24:看bytectf题 && 看工控ctf题</summary>
+  <summary>2020.10.24:补作业 && 看bytectf题</summary>
   学了一下golang语言的竞争漏洞
   又是零解的一天呜呜呜
 </details>
@@ -181,4 +181,8 @@
 
 <details>
   <summary>2020.11.11:补全了之前calc的wp && 学焊电</summary>
+</details>
+
+<details>
+  <summary>2020.11.12:补作业</summary>
 </details>
