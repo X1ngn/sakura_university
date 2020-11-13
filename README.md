@@ -186,3 +186,43 @@
 <details>
   <summary>2020.11.12:补作业</summary>
 </details>
+
+
+<details>
+  <summary>2020.11.13:补作业 && 学习arm程序调试</summary>
+  arm下的调试跟mips还是差不多的
+  
+  直接运行
+  
+  `./filename`
+  
+  调试
+  
+   shell1:`qemu-mipsel -g 1234 -L /Path/buildroot/output/target/ test`
+   
+   shell2:
+           ```
+           gdb-multiarch ./test
+           target remote 127.0.0.1:1234
+           ```
+  与pwntools结合
+  
+  ```
+  from pwn import*
+  import sys
+
+  context.binary = "ma"
+  context.arch='mips'
+  context.log_level = "debug"
+
+  if sys.argv[1] == "r":
+    p = remote("remote_addr", remote_port)
+  elif sys.argv[1] == "l":
+    p = process(["qemu-arm", "-L", "./", "./ma"])
+  else:
+    p = process(["qemu-arm", "-g", "1234", "-L", "./", "./ma"])
+  ```
+  
+  另一个shell执行shell2的操作
+  
+</details>
