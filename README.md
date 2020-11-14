@@ -44,7 +44,7 @@
   <summary>2020.10.22:复现2018 0CTF Finals Baby Kernel && 学习MIPS架构汇编语言</summary>
   wp：https://x1ng.top/2020/10/22/kernel-pwn%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF-%E6%9B%B4%E6%96%B0%E4%B8%AD/
   
-  学习笔记：https://x1ng.top/2020/10/22/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9B%B4%E6%96%B0%E4%B8%AD/
+  学习笔记：https://x1ng.top/2020/11/14/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
   
 </details>
 
@@ -226,4 +226,10 @@
   
   另一个shell执行shell2的操作
   
+</details>
+
+
+<details>
+  <summary>2020.11.14:复习了iofile泄露libc的利用方式 && 折腾了一下博客</summary>
+  IOfile泄露地址学习笔记:https://x1ng.top/2020/11/14/IO-file%E6%B3%84%E9%9C%B2libc%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A0/
 </details>
