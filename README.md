@@ -233,3 +233,8 @@
   <summary>2020.11.14:复习了iofile泄露libc的利用方式 && 折腾了一下博客</summary>
   IOfile泄露地址学习笔记:https://x1ng.top/2020/11/14/IO-file%E6%B3%84%E9%9C%B2libc%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A0/
 </details>
+
+
+<details>
+  <summary>2020.11.15:期中考试复习</summary>
+</details>
