@@ -241,5 +241,10 @@
 
 <details>
   <summary>2020.11.16:期中考试复习 && 复现Codegate2018 melong</summary>
-  wp:
+  wp:https://x1ng.top/2020/11/16/arm-pwn%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF/
+</details>
+
+
+<details>
+  <summary>2020.11.16:期中考试复习</summary>
 </details>
