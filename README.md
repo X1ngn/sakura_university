@@ -246,5 +246,5 @@
 
 
 <details>
-  <summary>2020.11.16:期中考试复习</summary>
+  <summary>2020.11.16:期中考试复习 && 学习C++网络编程</summary>
 </details>
