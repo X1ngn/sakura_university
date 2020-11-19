@@ -246,10 +246,22 @@
 
 
 <details>
-  <summary>2020.11.16:期中考试复习 && 学习C++网络编程</summary>
+  <summary>2020.11.17:期中考试复习 && 学习C++网络编程</summary>
 </details>
 
 
 <details>
-  <summary>2020.11.17:期中考试复习 && 补作业</summary>
+  <summary>2020.11.18:期中考试复习 && 补作业</summary>
 </details>
+
+<details>
+  <summary>2020.11.18:期中考试复习 && 补作业 && 学习多线程gdb调试</summary>
+  查看当前所有线程
+  
+  `i threads`
+  
+  切换跟踪线程
+  
+  `thread N`(N为gdb中的线程编号)
+</details>
+
