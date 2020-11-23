@@ -278,6 +278,6 @@
 
 
 <details>
-  <summary>2020.11.23:期中考试复习 && 复现西湖论剑IOT赛的两道PWN题</summary>
+  <summary>2020.11.23:复现西湖论剑IOT赛的两道PWN题 && 学习路由器处理HTTP请求方式</summary>
   wp:
 </details>
