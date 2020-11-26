@@ -284,11 +284,17 @@
 
 
 <details>
-  <summary>2020.11.24:申请免考 && 看了一些挖路由器的思路</summary>
-  水了一天，感觉考试复习太浪费时间，申请免考还要跑几趟
+  <summary>2020.11.24:看了一些挖路由器的思路</summary>
+  水了一天，感觉考试复习太浪费时间，申请免考跑几趟花了点时间，摸鱼
 </details>
 
 
 <details>
   <summary>2020.11.25:参加安洵杯</summary>
+  wp:https://x1ng.top/2020/11/26/%E5%AE%89%E6%B4%B5%E6%9D%AF2020/
+</details>
+
+
+<details>
+  <summary>2020.11.25:补作业</summary>
 </details>
