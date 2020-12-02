@@ -315,3 +315,11 @@
   <summary>2020.11.30:复现路由器题 && C++大作业</summary>
   wp:
 </details>
+
+<details>
+  <summary>2020.12.1:了解AWD赛技巧</summary>
+</details>
+
+<details>
+  <summary>2020.12.2:学习patch程序</summary>
+</details>
