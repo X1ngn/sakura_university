@@ -333,7 +333,26 @@
   <summary>2020.12.4:补作业</summary>
 </details>
 
-
 <details>
   <summary>2020.12.5:看了一下roar ctf的题 && 拆路由器调试</summary>
+</details>
+
+<details>
+  <summary>2020.12.6:拆路由器调试</summary>
+</details>
+
+<details>
+  <summary>2020.12.7:拆路由器调试</summary>
+</details>
+
+<details>
+  <summary>2020.12.8:学习shell编程</summary>
+</details>
+
+<details>
+  <summary>2020.12.9:补作业</summary>
+</details>
+
+<details>
+  <summary>2020.12.10:补作业</summary>
 </details>
