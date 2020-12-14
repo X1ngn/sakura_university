@@ -356,3 +356,24 @@
 <details>
   <summary>2020.12.10:补作业</summary>
 </details>
+
+<details>
+  <summary>2020.12.11:赶路 && 摸鱼</summary>
+  去吉林参加祥云杯，摸鱼一天
+</details>
+
+<details>
+  <summary>2020.12.12:参加祥云杯</summary>
+  第一天AWD，后面四个pwn通防防了3个，，太菜了没能给出exp
+</details>
+
+
+<details>
+  <summary>2020.12.13:参加祥云杯</summary>
+  第二天CTF，到最后半小时才做出一个pwn，，还是太菜了or2
+</details>
+
+<details>
+  <summary>2020.12.14:C++大作业</summary>
+  赶大作业ddl
+</details>
