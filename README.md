@@ -313,7 +313,7 @@
 
 <details>
   <summary>2020.11.30:复现路由器题 && C++大作业</summary>
-  wp:
+  wp:https://www.anquanke.com/post/id/224301
 </details>
 
 <details>
@@ -364,7 +364,7 @@
 
 <details>
   <summary>2020.12.12:参加祥云杯</summary>
-  第一天AWD，后面四个pwn通防防了3个，，太菜了没能给出exp
+  第一天AWD，四个pwn通防防了3个，，然而太菜了没能给出exp
 </details>
 
 
