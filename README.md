@@ -382,3 +382,13 @@
   <summary>2020.12.15:总结关于exit函数的利用姿势</summary>
    笔记:https://x1ng.top/2020/12/15/%E5%AD%A6%E4%B9%A0%E5%85%B3%E4%BA%8Eexit%E7%9A%84%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95/
 </details>
+
+
+<details>
+  <summary>2020.12.16:学习长亭对小米路由器逻辑漏洞的挖掘思路 && 学习VMpwn</summary>
+  学习笔记:https://x1ng.top/2020/12/16/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8-%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
+</details>
+
+<details>
+  <summary>2020.12.17:</summary>
+</details>
