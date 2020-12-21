@@ -393,3 +393,21 @@
   <summary>2020.12.17:继续学习VMpwn && 补作业</summary>
   wp:https://x1ng.top/2020/12/17/%E5%AD%A6%E4%B9%A0VM-PWN/
 </details>
+
+<details>
+  <summary>2020.12.18:补作业</summary>
+</details>
+
+<details>
+  <summary>2020.12.19:继续学习C++虚函数的虚表利用</summary>
+  笔记:
+</details>
+
+<details>
+  <summary>2020.12.20:参加XCTF && 自闭</summary>
+</details>
+
+<details>
+  <summary>2020.12.21:学习万用表使用</summary>
+  笔记:
+</details>
