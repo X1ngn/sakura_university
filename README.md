@@ -408,6 +408,10 @@
 </details>
 
 <details>
-  <summary>2020.12.21:学习万用表使用</summary>
+  <summary>2020.12.21:学习内核pwn</summary>
+</details>
+
+<details>
+  <summary>2020.12.21:学习内核pwn</summary>
   笔记:
 </details>
