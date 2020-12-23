@@ -421,7 +421,7 @@
 
 <details>
   <summary>2020.12.23:参加XCTF && 自闭</summary>
-  pwn
+  pwn不动，，队里没有re爷爷，做了一个re签到题
 </details>
 
 <details>
