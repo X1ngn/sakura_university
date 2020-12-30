@@ -430,5 +430,30 @@
 
 
 <details>
-  <summary>2020.12.25:</summary>
+  <summary>2020.12.25:补作业</summary>
+</details>
+
+
+<details>
+  <summary>2020.12.26:复习考试</summary>
+</details>
+
+
+<details>
+  <summary>2020.12.27:考试</summary>
+</details>
+
+
+<details>
+  <summary>2020.12.28:协会招新赛出题</summary>
+</details>
+
+
+<details>
+  <summary>2020.12.29:协会招新赛出题</summary>
+</details>
+
+
+<details>
+  <summary>2020.12.30:协会招新赛出题</summary>
 </details>
