@@ -375,7 +375,7 @@
 
 <details>
   <summary>2020.12.14:C++大作业</summary>
-  赶C++大作业ddl
+  肝C++大作业
 </details>
 
 <details>
@@ -456,4 +456,43 @@
 
 <details>
   <summary>2020.12.30:协会招新赛出题</summary>
+</details>
+
+
+<details>
+  <summary>2020.12.31:协会招新赛出题 && 学习内核pwn</summary>
+</details>
+
+
+<details>
+  <summary>2021.01.01:学习内核pwn</summary>
+</details>
+
+
+<details>
+  <summary>2021.01.02:学习内核pwn</summary>
+</details>
+
+
+<details>
+  <summary>2021.01.03:学习内核pwn</summary>
+</details>
+
+
+<details>
+  <summary>2021.01.04:学习内核pwn && C++大作业</summary>
+  1. 把内核祥云杯例题复现的坑填完了
+    wp:https://x1ng.top/2021/01/04/kernel-pwn%E5%85%A5%E9%97%A8%E4%B9%8B%E8%B7%AF-%E4%BA%8C/
+  
+  2. 赶C++大作业
+</details>
+
+
+<details>
+  <summary>2021.01.05:C++大作业</summary>
+</details>
+
+
+<details>
+  <summary>2021.01.06:C++大作业 && 补作业</summary>
 </details>
