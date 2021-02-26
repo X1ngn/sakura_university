@@ -531,4 +531,14 @@
   wp:https://x1ng.top/2021/02/02/HWS%E5%86%AC%E4%BB%A4%E8%90%A5%E7%BA%BF%E4%B8%8A%E9%80%89%E6%8B%94%E8%B5%9B2021-WP/
 </details>
 
+- 2021.02.01 -- 2021.02.07 Hgame2021 week1
+- 2021.02.08 -- 2021.02.21 调试路由器
+- 2021.02.22 -- 2021.02.27 HWS冬令营
 
+<details>
+  <summary>2021.02.27:参加HWS计划2021结营赛</summary>
+</details>
+
+<details>
+  <summary>2021.02.28:参加HWS计划2021结营赛</summary>
+</details>
