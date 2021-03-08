@@ -532,7 +532,33 @@
 </details>
 
 - 2021.02.01 -- 2021.02.07 Hgame2021 week1
-- 2021.02.08 -- 2021.02.21 调试路由器
+- 2021.02.08 -- 2021.02.21 逆向路由器固件
 - 2021.02.22 -- 2021.03.01 HWS冬令营
 
+<details>
+  <summary>2021.03.02:返校</summary>
+</details>
 
+<details>
+  <summary>2021.03.03:安恒培训</summary>
+</details>
+
+<details>
+  <summary>2021.03.04:安恒培训</summary>
+</details>
+
+<details>
+  <summary>2021.03.05:安恒培训</summary>
+</details>
+
+<details>
+  <summary>2021.03.06:参加D3CTF</summary>
+</details>
+
+<details>
+  <summary>2021.03.07:参加D3CTF</summary>
+</details>
+
+<details>
+  <summary>2021.03.08:逆向路由器固件</summary>
+</details>
