@@ -623,5 +623,21 @@
   <summary>2021.03.19:学习ARM一些特性 && 学习劫持TLS绕过canary</summary>
 </details>
 
+- 2021.03.20 -- 2021.04.04 复现群晖NAS CVE-2021-27647 
 
+<details>
+  <summary>2021.04.05:复现虎符2021 pwn</summary>
+</details>
 
+<details>
+  <summary>2021.04.05:复现虎符2021 pwn</summary>
+</details>
+
+<details>
+  <summary>2021.04.05:复现虎符2021 pwn</summary>
+</details>
+
+<details>
+  <summary>2021.04.05:复现虎符2021 pwn</summary>
+  wp:
+</details>
