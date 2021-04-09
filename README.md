@@ -615,9 +615,11 @@
   <summary>2021.03.17:学习常见加密算法</summary>
 </details>
 
+
 <details>
   <summary>2021.03.18:复习侧信道攻击和故障注入</summary>
 </details>
+
 
 <details>
   <summary>2021.03.19:学习ARM一些特性 && 学习劫持TLS绕过canary</summary>
@@ -625,19 +627,28 @@
 
 - 2021.03.20 -- 2021.04.04 复现群晖NAS CVE-2021-27647 
 
-<details>
-  <summary>2021.04.05:复现虎符2021 pwn</summary>
-</details>
 
 <details>
   <summary>2021.04.05:复现虎符2021 pwn</summary>
 </details>
 
-<details>
-  <summary>2021.04.05:复现虎符2021 pwn</summary>
-</details>
 
 <details>
-  <summary>2021.04.05:复现虎符2021 pwn</summary>
+  <summary>2021.04.06:复现虎符2021 pwn</summary>
+</details>
+
+
+<details>
+  <summary>2021.04.07:补作业</summary>
+</details>
+
+
+<details>
+  <summary>2021.04.08:补作业</summary>
+</details>
+
+
+<details>
+  <summary>2021.04.09:复现虎符2021 pwn</summary>
   wp:
 </details>
