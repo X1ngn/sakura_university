@@ -689,7 +689,10 @@
 </details>
 
 
+- 2021.04.17 -- 2021.04.29 开发算法训练
+- 2021.04.30 -- 2021.05.04 摸鱼五天
+
 <details>
-  <summary>2021.04.17:</summary>
+  <summary>2021.05.05:参加CSTC</summary>
 </details>
 
