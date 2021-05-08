@@ -692,7 +692,28 @@
 - 2021.04.17 -- 2021.04.29 开发算法训练
 - 2021.04.30 -- 2021.05.04 摸鱼五天
 
+
 <details>
   <summary>2021.05.05:参加CSTC</summary>
 </details>
 
+
+<details>
+  <summary>2021.05.06:继续复现群晖NAS CVE-2021-27647</summary>
+</details>
+
+
+
+<details>
+  <summary>2021.05.07:补作业</summary>
+</details>
+
+
+<details>
+  <summary>2021.05.08:参加CVVD && 补作业</summary>
+</details>
+
+
+<details>
+  <summary>2021.05.09:</summary>
+</details>
