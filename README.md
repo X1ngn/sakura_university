@@ -768,7 +768,27 @@
   <summary>2021.05.18:学习开发算法</summary>
 </details>
 
+<details>
+  <summary>2021.05.19:学习汽车安全漏洞</summary>
+</details>
+
+
+- 2021.05.20 -- 2021.05.23 参加WIDC世界智能驾驶大赛
+
 
 <details>
-  <summary>2021.05.19:</summary>
+  <summary>2021.05.24:继续复现群晖NAS CVE-2021-27647</summary>
 </details>
+
+
+
+<details>
+  <summary>2021.05.25:继续复现群晖NAS CVE-2021-27647</summary>
+</details>
+
+
+
+<details>
+  <summary>2021.05.26:</summary>
+</details>
+
