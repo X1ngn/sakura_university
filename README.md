@@ -792,3 +792,27 @@
   <summary>2021.05.26:学习mqtt协议</summary>
 </details>
 
+
+<details>
+  <summary>2021.05.27:继续复现群晖NAS CVE-2021-27647</summary>
+</details>
+
+
+<details>
+  <summary>2021.05.28:继续复现群晖NAS CVE-2021-27647</summary>
+</details>
+
+
+<details>
+  <summary>2021.05.29:XCTF</summary>
+</details>
+
+
+<details>
+  <summary>2021.05.30:XCTF</summary>
+</details>
+
+
+<details>
+  <summary>2021.05.31:</summary>
+</details>
