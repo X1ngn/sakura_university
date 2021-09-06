@@ -816,3 +816,7 @@
 <details>
   <summary>2021.05.31:</summary>
 </details>
+
+----------------------------------------------------
+
+<summary>从Sakura University休学中......</summary>
